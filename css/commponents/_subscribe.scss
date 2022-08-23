@@ -89,17 +89,17 @@
     right: 0;
     transform: translateY(0);
     &:first-child{
-      animation: slider 50s linear .4s infinite;
+      animation: slider 50s linear infinite;
       margin-top: 32px;
       left: 0;
     }
     &:nth-child(2){
-      animation: slider 50s linear .4s infinite;
+      animation: slider 50s linear infinite;
       margin-top: 112px;
       left: 210px;
     }
     &:last-child{
-      animation: slider 50s linear .4s infinite;
+      animation: slider 50s linear infinite;
     }
   }
   &__card {
@@ -157,7 +157,7 @@
 }
 @keyframes slider{
   100%{
-    transform: translateY(-910px);
+    transform: translateY(-850px);
   }
 
 }
