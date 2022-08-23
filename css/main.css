@@ -585,6 +585,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .info__wrapper {
   margin-top: 87px;
+  position: relative;
 }
 
 .tab {
@@ -625,6 +626,13 @@ input[type=search]::-webkit-search-results-decoration {
   color: #2a344a;
   transition: all 0.3s ease;
 }
+.tab-content {
+  display: none;
+  position: absolute;
+  max-width: 500px;
+  top: 0;
+  right: 0;
+}
 
 .tab_active {
   background-color: #F1F7FF;
@@ -633,6 +641,10 @@ input[type=search]::-webkit-search-results-decoration {
 .tab_active .tab__descr {
   display: block;
   opacity: 1;
+}
+
+.tab-content_active {
+  display: block;
 }
 
 .faq {
