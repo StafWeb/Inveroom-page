@@ -1,1 +1,123 @@
 // --- Header --- //
+.header {
+  background-color: #07122a;
+  height: 70px;
+  border-bottom: 1px solid rgba(119, 134, 165, 0.2);
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0px 40px;
+    max-width: 1920px;
+    margin: 0px auto;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    picture {
+      width: 27.31px;
+      height: 24px;
+    }
+    & > span {
+      font-weight: 700;
+      font-size: 16.4081px;
+      line-height: 140%;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      text-transform: uppercase;
+      & > span {
+        color: rgba(119, 134, 165, 1);
+      }
+    }
+  }
+  &__center {
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    nav {
+      display: flex;
+      gap: 40px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: 0.14em;
+        color: #7786A5;
+        text-transform: uppercase;
+        &:first-child{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &__end {
+    display: flex;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.14em;
+    color: #7786a5;
+    gap: 40px;
+  }
+  &__login {
+    display: flex;
+    gap: 10px;
+    &-img {
+      width: 17px;
+      height: 17px;
+    }
+  }
+  &__lang {
+    &-inner {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+    }
+    &-img {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+.nav__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+}
+.connect-btn {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.14em;
+  color: #7786a5;
+  text-transform: uppercase;
+  & > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: rgba(111, 176, 141, 0.2);
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100px;
+      background-color: #6fb08d;
+    }
+  }
+}
