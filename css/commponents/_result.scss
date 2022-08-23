@@ -23,6 +23,16 @@
     background-color:  rgba(241, 247, 255, 1);
     border-radius: 26px;
   }
+  &__decor{
+    position: absolute;
+    content: "";
+    height: 102px;
+    width: 26px;
+    top: 126px;
+    right: 118px;
+    background-color:  rgba(241, 247, 255, 1);
+    border-radius: 26px;
+  }
   &__wrapper {
     max-width: 1170px;
     margin: 0 auto;
@@ -44,16 +54,6 @@
       width: 1px;
       height: 155px;
       background: #e1edfd;
-    }
-    &:last-child::before{
-      position: absolute;
-      content: "";
-      height: 102px;
-      width: 26px;
-      top: 22px;
-      right: -266px;
-      background-color:  rgba(241, 247, 255, 1);
-      border-radius: 26px;
     }
   }
   &__num {

@@ -519,6 +519,16 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: rgb(241, 247, 255);
   border-radius: 26px;
 }
+.result__decor {
+  position: absolute;
+  content: "";
+  height: 102px;
+  width: 26px;
+  top: 126px;
+  right: 118px;
+  background-color: rgb(241, 247, 255);
+  border-radius: 26px;
+}
 .result__wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -541,16 +551,6 @@ input[type=search]::-webkit-search-results-decoration {
   width: 1px;
   height: 155px;
   background: #e1edfd;
-}
-.result__col:last-child::before {
-  position: absolute;
-  content: "";
-  height: 102px;
-  width: 26px;
-  top: 22px;
-  right: -266px;
-  background-color: rgb(241, 247, 255);
-  border-radius: 26px;
 }
 .result__num {
   font-weight: 700;
