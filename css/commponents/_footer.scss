@@ -1,0 +1,9 @@
+.footer{
+  margin: 40px 0px;
+  background: #FFFFFF;
+  &__container,
+  &__copy{
+    max-width: 1170px;
+    margin: 0px auto;
+  }
+}
