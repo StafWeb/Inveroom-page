@@ -3,6 +3,21 @@
   background-color: #07122a;
   height: 70px;
   border-bottom: 1px solid rgba(119, 134, 165, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  &_scroll {
+    height: 40px;
+    .header__logo{
+      & > span{
+        font-size: 14.0088px;
+      }
+      & > picture{
+        height: 20.71px;
+      }
+    }
+  }
   &__container {
     display: flex;
     height: 100%;
@@ -20,6 +35,10 @@
     picture {
       width: 27.31px;
       height: 24px;
+      transition: all .3s ease;
+      & > svg{
+        height: 100%;
+      }
     }
     & > span {
       font-weight: 700;
@@ -28,6 +47,7 @@
       letter-spacing: 0.1em;
       color: #ffffff;
       text-transform: uppercase;
+      transition: all .3s ease;
       & > span {
         color: rgba(119, 134, 165, 1);
       }
@@ -48,9 +68,9 @@
         font-size: 12px;
         line-height: 140%;
         letter-spacing: 0.14em;
-        color: #7786A5;
+        color: #7786a5;
         text-transform: uppercase;
-        &:first-child{
+        &:first-child {
           color: #ffffff;
         }
       }

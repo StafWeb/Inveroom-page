@@ -52,6 +52,22 @@ function faqTabs() {
   };
 
 };
+function callbackFunc() {
+  var y = window.pageYOffset;
+  let h = document.querySelector(".header");
+  console.log(y)
+  if (y > 20) {
+    h.classList.add("header_scroll");
+  } else {
+    h.classList.remove("header_scroll");
+  }
+};
+
+
+
 infoTabs();
 faqQuestion();
 faqTabs();
+window.addEventListener('scroll', () => {
+  callbackFunc();
+});

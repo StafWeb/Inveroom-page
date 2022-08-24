@@ -143,6 +143,20 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #07122a;
   height: 70px;
   border-bottom: 1px solid rgba(119, 134, 165, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.header_scroll {
+  height: 40px;
+}
+.header_scroll .header__logo > span {
+  font-size: 14.0088px;
+}
+.header_scroll .header__logo > picture {
+  height: 20.71px;
 }
 .header__container {
   display: flex;
@@ -162,6 +176,10 @@ input[type=search]::-webkit-search-results-decoration {
 .header__logo picture {
   width: 27.31px;
   height: 24px;
+  transition: all 0.3s ease;
+}
+.header__logo picture > svg {
+  height: 100%;
 }
 .header__logo > span {
   font-weight: 700;
@@ -170,6 +188,7 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.1em;
   color: #ffffff;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 .header__logo > span > span {
   color: rgb(119, 134, 165);
@@ -191,7 +210,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.14em;
-  color: #7786A5;
+  color: #7786a5;
   text-transform: uppercase;
 }
 .header__center nav a:first-child {
