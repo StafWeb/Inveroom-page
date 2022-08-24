@@ -57,22 +57,26 @@
     display: flex;
     width: 100%;
     max-width: 1170px;
-    nav {
+  }
+  &__nav {
+    display: flex;
+    gap: 40px;
+    a {
       display: flex;
-      gap: 40px;
-      a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 140%;
-        letter-spacing: 0.14em;
-        color: #7786a5;
-        text-transform: uppercase;
-        &:first-child {
-          color: #ffffff;
-        }
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 140%;
+      letter-spacing: 0.14em;
+      color: #7786a5;
+      text-transform: uppercase;
+      transition: all .3s ease;
+      &:first-child {
+        color: #ffffff;
+      }
+      path{
+        transition: all .3s ease;
       }
     }
   }
@@ -88,6 +92,11 @@
   &__login {
     display: flex;
     gap: 10px;
+    color: #7786a5;
+    transition: all .3s ease;
+    path{
+      transition: all .3s ease;
+    }
     &-img {
       width: 17px;
       height: 17px;
@@ -98,6 +107,12 @@
       display: flex;
       gap: 11px;
       align-items: center;
+      cursor: pointer;
+      transition: all .3s ease;
+      circle,
+      path{
+        transition: all .3s ease;
+      }
     }
     &-img {
       width: 13px;
@@ -124,6 +139,11 @@
   letter-spacing: 0.14em;
   color: #7786a5;
   text-transform: uppercase;
+  transition: all .3s ease;
+  cursor: pointer;
+  path{
+  transition: all .3s ease;
+  }
   & > span {
     display: flex;
     justify-content: center;
@@ -138,6 +158,36 @@
       height: 8px;
       border-radius: 100px;
       background-color: #6fb08d;
+    }
+  }
+}
+
+@media(min-width:1000px){
+  .header__nav{
+    & > a:not(:first-child):hover{
+      color: #ffffff;
+    }
+    & > a:not(:first-child):hover path{
+      fill: #ffffff;
+    }
+  }
+  .connect-btn:hover{
+    color: #ffffff;
+    path{
+      fill: #ffffff;
+    }
+  }
+  .header__login:hover{
+    color: #ffffff;
+    path{
+      fill: #ffffff;
+    }
+  }
+  .header__lang-inner:hover{
+    color: #ffffff;
+    circle,
+    path{
+      stroke: #ffffff;
     }
   }
 }

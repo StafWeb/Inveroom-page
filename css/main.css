@@ -197,11 +197,11 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   max-width: 1170px;
 }
-.header__center nav {
+.header__nav {
   display: flex;
   gap: 40px;
 }
-.header__center nav a {
+.header__nav a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -211,9 +211,13 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.14em;
   color: #7786a5;
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
-.header__center nav a:first-child {
+.header__nav a:first-child {
   color: #ffffff;
+}
+.header__nav a path {
+  transition: all 0.3s ease;
 }
 .header__end {
   display: flex;
@@ -227,6 +231,11 @@ input[type=search]::-webkit-search-results-decoration {
 .header__login {
   display: flex;
   gap: 10px;
+  color: #7786a5;
+  transition: all 0.3s ease;
+}
+.header__login path {
+  transition: all 0.3s ease;
 }
 .header__login-img {
   width: 17px;
@@ -236,6 +245,12 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   gap: 11px;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__lang-inner circle,
+.header__lang-inner path {
+  transition: all 0.3s ease;
 }
 .header__lang-img {
   width: 13px;
@@ -261,6 +276,11 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: 0.14em;
   color: #7786a5;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.connect-btn path {
+  transition: all 0.3s ease;
 }
 .connect-btn > span {
   display: flex;
@@ -279,6 +299,33 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #6fb08d;
 }
 
+@media (min-width: 1000px) {
+  .header__nav > a:not(:first-child):hover {
+    color: #ffffff;
+  }
+  .header__nav > a:not(:first-child):hover path {
+    fill: #ffffff;
+  }
+  .connect-btn:hover {
+    color: #ffffff;
+  }
+  .connect-btn:hover path {
+    fill: #ffffff;
+  }
+  .header__login:hover {
+    color: #ffffff;
+  }
+  .header__login:hover path {
+    fill: #ffffff;
+  }
+  .header__lang-inner:hover {
+    color: #ffffff;
+  }
+  .header__lang-inner:hover circle,
+.header__lang-inner:hover path {
+    stroke: #ffffff;
+  }
+}
 .offer {
   position: relative;
   padding-top: 150px;
@@ -320,12 +367,13 @@ input[type=search]::-webkit-search-results-decoration {
   gap: 9px;
   height: 50px;
   padding: 0px 20px;
-  background: #2551af;
+  background: #2C5DC9;
   border-radius: 10px;
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
   color: #eef1f5;
+  transition: all 0.3s ease;
 }
 .offer__graph {
   position: absolute;
@@ -340,6 +388,11 @@ input[type=search]::-webkit-search-results-decoration {
   pointer-events: none;
 }
 
+@media (min-width: 1000px) {
+  .offer__link:hover {
+    background: #2551af;
+  }
+}
 .subscribe {
   margin-top: 150px;
   background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
@@ -377,6 +430,19 @@ input[type=search]::-webkit-search-results-decoration {
 .subscribe__descr:nth-child(3) {
   margin-top: 10px;
 }
+.subscribe__btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 13px 20px;
+  background: #2551af;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #eef1f5;
+  transition: all 0.3s ease;
+}
 .subscribe__form {
   position: relative;
   width: 370px;
@@ -394,26 +460,6 @@ input[type=search]::-webkit-search-results-decoration {
   padding-right: 170px;
   background: #f1f7ff;
   border-radius: 10px;
-  transition: all 0.3s ease;
-}
-.subscribe__form > input:focus {
-  border: 2px solid #7786a5;
-  background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
-}
-.subscribe__form > input:focus + .subscribe__btn {
-  background: #2551af;
-}
-.subscribe__btn {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  padding: 13px 20px;
-  background: #2551af;
-  border-radius: 10px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
-  color: #eef1f5;
   transition: all 0.3s ease;
 }
 .subscribe__slider {
@@ -511,13 +557,21 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (min-width: 1000px) {
-  .subscribe__form > input:hover {
+  .subscribe__form:hover > input {
     background-color: #e1edfd;
   }
-  .subscribe__form > input:hover + .subscribe__btn {
+  .subscribe__form:hover > input + .subscribe__btn {
     background: #295bc9;
   }
 }
+.subscribe__form > input:focus {
+  border: 2px solid #7786a5;
+  background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
+}
+.subscribe__form > input:focus + .subscribe__btn {
+  background: #2551af;
+}
+
 .result {
   background: linear-gradient(90deg, #f1f7ff 0%, #ffffff 100%);
   margin-top: 40px;

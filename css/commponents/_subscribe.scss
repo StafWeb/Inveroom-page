@@ -33,6 +33,19 @@
       margin-top: 10px;
     }
   }
+  &__btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 13px 20px;
+    background: #2551af;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #eef1f5;
+    transition: all 0.3s ease;
+  }
   &__form {
     position: relative;
     width: 370px;
@@ -50,27 +63,8 @@
       background: #f1f7ff;
       border-radius: 10px;
       transition: all 0.3s ease;
-      &:focus {
-        border: 2px solid #7786a5;
-        background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
-        & + .subscribe__btn {
-          background: #2551af;
-        }
-      }
+      
     }
-  }
-  &__btn {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    padding: 13px 20px;
-    background: #2551af;
-    border-radius: 10px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
-    color: #eef1f5;
-    transition: all 0.3s ease;
   }
   &__slider {
     height: 100%;
@@ -159,13 +153,23 @@
 }
 @media (min-width: 1000px) {
   .subscribe {
-    &__form {
-      & > input:hover {
+    &__form:hover {
+      & > input {
         background-color: #e1edfd;
       }
-      & > input:hover + .subscribe__btn {
+      & > input + .subscribe__btn {
         background: #295bc9;
       }
+    }
+  }
+}
+
+.subscribe__form{
+  & > input:focus{
+    border: 2px solid #7786a5;
+    background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
+    & + .subscribe__btn {
+      background: #2551af;
     }
   }
 }
