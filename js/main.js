@@ -18,12 +18,13 @@ function faqQuestion() {
   let content = document.querySelectorAll(".faq__answer");
   tab.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      tabRem();
-      tabContRem();
-      setTimeout(() => {
-        btn.classList.add('faq__question_active');
-        this.nextElementSibling.classList.add('faq__answer_active');
-      }, 50);
+      // tabRem();
+      // tabContRem();
+      btn.classList.toggle('faq__question_active');
+      this.nextElementSibling.classList.toggle('faq__answer_active');
+      // setTimeout(() => {
+     
+      // }, 50);
 
     })
   });
