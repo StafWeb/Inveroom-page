@@ -27,7 +27,7 @@
     color: #7786a5;
     background: #f1f7ff;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
   }
   &__question {
     position: relative;
@@ -41,7 +41,7 @@
     line-height: 140%;
     color: #2a344a;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     &::after {
       position: absolute;
       top: 25px;
@@ -66,7 +66,7 @@
   &__answer {
     overflow: hidden;
     max-height: 0px;
-    transition: all 0.4s ease 0s;
+    transition: max-height 0.4s ease-in-out;
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -90,7 +90,6 @@
     }
     &_active {
       max-height: 100vh;
-      transition: all 0.4s ease 0.2s;
     }
   }
   &__wrapper {
