@@ -667,7 +667,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: rgb(42, 52, 74);
 }
 .info__wrapper {
-  margin-top: 87px;
+  margin-top: 80px;
   position: relative;
 }
 
@@ -690,6 +690,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 70px;
   border-radius: 100px;
   background-color: #f1f7ff;
+  margin-top: 7px;
 }
 .tab__text {
   display: flex;
@@ -701,7 +702,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 30px;
   line-height: 150%;
   color: #7786a5;
-  margin-top: 13px;
+  margin-top: 20px;
   transition: all 0.3s ease;
 }
 .tab__descr {
@@ -714,15 +715,18 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.3s ease;
 }
 .tab-content {
-  display: none;
+  display: flex;
   position: absolute;
+  visibility: hidden;
   max-width: 500px;
+  opacity: 0;
   top: 0;
   right: 0;
+  transform: scale(0.7);
+  transition: all 0.5s ease;
 }
 
 .adviser {
-  display: none;
   gap: 29px;
   top: -103px;
   right: -2px;
@@ -980,7 +984,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .transaction {
-  display: none;
   align-items: flex-end;
   top: -92px;
 }
@@ -1353,11 +1356,6 @@ input[type=search]::-webkit-search-results-decoration {
   color: #2a344a;
 }
 
-.tab-content {
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
 .path-hover {
   transition: all 0.3s ease;
 }
@@ -1380,9 +1378,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .tab-content_active {
-  display: flex;
+  visibility: visible;
   opacity: 1;
-  transition: all 0.4s ease;
+  transform: scale(1);
 }
 
 @media (min-width: 1000px) {
