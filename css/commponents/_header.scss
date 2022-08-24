@@ -58,12 +58,13 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    max-width: 1191px;
+    max-width: 1182px;
+    margin-top: 3px;
   }
   &__nav {
     display: flex;
     gap: 40px;
-    margin-left: 16px;
+    margin-left: 6px;
     align-items: flex-end;
     a {
       display: flex;
