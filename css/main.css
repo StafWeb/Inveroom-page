@@ -732,7 +732,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .adviser {
   gap: 29px;
-  top: -103px;
+  top: -91px;
   right: -2px;
 }
 .adviser__col {
@@ -1415,6 +1415,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   gap: 10px;
   margin: 40px 0px;
+  justify-content: start;
 }
 .faq__tab-btn {
   padding: 10px 20px 9px;
@@ -1468,12 +1469,23 @@ input[type=search]::-webkit-search-results-decoration {
 .faq__answer-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
   color: #7786a5;
   padding: 20px 40px 40px;
+}
+.faq__answer-wrapper > ul {
+  list-style: disc;
+  margin-top: 10px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faq__answer-wrapper > ul li {
+  list-style: disc;
 }
 .faq__answer_active {
   max-height: 100vh;
@@ -1513,6 +1525,7 @@ input[type=search]::-webkit-search-results-decoration {
 .faq__tab-btn_active {
   color: #ffffff;
   background: #7786a5;
+  font-size: 16px;
 }
 
 .footer {
@@ -1595,7 +1608,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 40px;
   background: #f1f7ff;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s ease;
 }
 .footer__social {
   display: flex;
@@ -1671,7 +1684,7 @@ input[type=search]::-webkit-search-results-decoration {
     color: #2a344a;
   }
   .footer__link:hover {
-    background: #2a344a;
+    background: #46536d;
   }
   .footer__copy > a:hover {
     color: #2a344a;
