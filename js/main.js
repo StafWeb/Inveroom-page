@@ -23,7 +23,7 @@ function faqQuestion() {
       setTimeout(() => {
         btn.classList.add('faq__question_active');
         this.nextElementSibling.classList.add('faq__answer_active');
-      }, 100);
+      }, 50);
 
     })
   });
