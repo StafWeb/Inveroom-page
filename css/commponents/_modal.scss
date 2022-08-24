@@ -1,0 +1,114 @@
+.modal {
+  position: absolute;
+  max-width: 220px;
+  top: -1000px;
+  left: -87px;
+  background: #ffffff;
+  border: 2px solid #e1edfd;
+  border-radius: 10px;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: all .6s ease-in-out;
+  z-index: 10;
+  cursor: default;
+  &_active{
+    top: -7px;
+    left: -87px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 15px;
+  }
+  &__btn {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 15px;
+    right: 15px;
+  }
+  &__photo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #e1edfd;
+    margin-bottom: 10px;
+    span {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 100px;
+      background-color: rgba(111, 176, 141, 0.2);
+      &::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 100px;
+        background-color: #6fb08d;
+      }
+    }
+  }
+  &__descr {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #2a344a;
+    text-transform: none;
+    margin-bottom: 28px;
+    & > i {
+      color: #6fb08d;
+    }
+  }
+  &__tel {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #2a344a;
+    margin-bottom: 17px;
+    & > i {
+      color: #7786a5;
+    }
+  }
+  &__mail {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #2a344a;
+    margin-bottom: 17px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 180px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #7786a5;
+    transition: all .4s ease;
+  }
+  &__wp-link{
+    background-color: #20B038;
+  }
+  &__tg-link{
+    background-color: #2AABEE;
+  }
+  &__ms-link{
+    background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
+  }
+}

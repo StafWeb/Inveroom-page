@@ -23,7 +23,7 @@ function faqQuestion() {
       btn.classList.toggle('faq__question_active');
       this.nextElementSibling.classList.toggle('faq__answer_active');
       // setTimeout(() => {
-     
+
       // }, 50);
 
     })
@@ -63,7 +63,32 @@ function callbackFunc() {
     h.classList.remove("header_scroll");
   }
 };
-
+function modal() {
+  let modalOpen = document.querySelectorAll(".modal-open");
+  let modal = document.querySelector(".modal");
+  let modalClose = document.querySelector(".modal__btn");
+  let body = document.querySelector("main");
+  modal.addEventListener('click', (evt) => { evt.stopPropagation(); });
+  body.addEventListener('click', () => {
+    if(modal.classList.contains('modal_active')){
+      modal.classList.remove('modal_active');
+    }
+  });
+  modalOpen.forEach(function (btn) {
+    btn.addEventListener('click', () => {
+      modal.classList.add('modal_active');
+    })
+  });
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('modal_active');
+  });
+  document.addEventListener('keydown', function(e) {
+    let keyCode = e.key;
+    if (keyCode === 'Escape') {
+      modal.classList.remove('modal_active');
+    }
+});
+};
 
 
 infoTabs();
@@ -72,3 +97,4 @@ faqTabs();
 window.addEventListener('scroll', () => {
   callbackFunc();
 });
+modal();

@@ -279,6 +279,7 @@ input[type=search]::-webkit-search-results-decoration {
   text-transform: uppercase;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 .connect-btn path {
   transition: all 0.3s ease;
@@ -1672,4 +1673,118 @@ input[type=search]::-webkit-search-results-decoration {
   .footer__copy > a:hover {
     color: #2a344a;
   }
+}
+.modal {
+  position: absolute;
+  max-width: 220px;
+  top: -1000px;
+  left: -87px;
+  background: #ffffff;
+  border: 2px solid #e1edfd;
+  border-radius: 10px;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+  cursor: default;
+}
+.modal_active {
+  top: -7px;
+  left: -87px;
+}
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 15px;
+}
+.modal__btn {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 15px;
+  right: 15px;
+}
+.modal__photo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #e1edfd;
+  margin-bottom: 10px;
+}
+.modal__photo span {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  background-color: rgba(111, 176, 141, 0.2);
+}
+.modal__photo span::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: #6fb08d;
+}
+.modal__descr {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: #2a344a;
+  text-transform: none;
+  margin-bottom: 28px;
+}
+.modal__descr > i {
+  color: #6fb08d;
+}
+.modal__tel {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: #2a344a;
+  margin-bottom: 17px;
+}
+.modal__tel > i {
+  color: #7786a5;
+}
+.modal__mail {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: #2a344a;
+  margin-bottom: 17px;
+}
+.modal__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 180px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #7786a5;
+  transition: all 0.4s ease;
+}
+.modal__wp-link {
+  background-color: #20B038;
+}
+.modal__tg-link {
+  background-color: #2AABEE;
+}
+.modal__ms-link {
+  background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
 }
