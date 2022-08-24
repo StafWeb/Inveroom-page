@@ -140,17 +140,16 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .header {
+  width: 100%;
   background-color: #07122a;
   height: 70px;
   border-bottom: 1px solid rgba(119, 134, 165, 0.2);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: fixed;
   z-index: 10;
   transition: all 0.3s ease;
 }
 .header_scroll {
-  height: 40px;
+  height: 50px;
 }
 .header_scroll .header__logo > span {
   font-size: 14.0088px;
@@ -282,7 +281,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .offer {
   position: relative;
-  padding-top: 80px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -53,7 +53,7 @@ function faqTabs() {
 
 };
 function callbackFunc() {
-  var y = window.pageYOffset;
+  let y = window.pageYOffset;
   let h = document.querySelector(".header");
   console.log(y)
   if (y > 20) {
