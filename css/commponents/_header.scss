@@ -20,7 +20,7 @@
   }
   &__container {
     display: flex;
-    height: 100%;
+    height: inherit;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-right: 178px;
     picture {
       width: 27.31px;
       height: 24px;
@@ -56,7 +57,7 @@
   &__center {
     display: flex;
     width: 100%;
-    max-width: 1170px;
+    justify-content: space-between;
   }
   &__nav {
     display: flex;
@@ -87,7 +88,8 @@
     line-height: 140%;
     letter-spacing: 0.14em;
     color: #7786a5;
-    gap: 40px;
+    gap: 44px;
+    margin-left: 163px;
   }
   &__login {
     display: flex;
@@ -129,7 +131,6 @@
   height: 17px;
 }
 .connect-btn {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -148,10 +149,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     border-radius: 100px;
     background-color: rgba(111, 176, 141, 0.2);
+    margin-right: 3px;
+    margin-bottom: 4px;
     &::after {
       content: "";
       width: 8px;

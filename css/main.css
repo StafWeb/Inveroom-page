@@ -159,7 +159,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .header__container {
   display: flex;
-  height: 100%;
+  height: inherit;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -171,6 +171,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-right: 178px;
 }
 .header__logo picture {
   width: 27.31px;
@@ -195,7 +196,7 @@ input[type=search]::-webkit-search-results-decoration {
 .header__center {
   display: flex;
   width: 100%;
-  max-width: 1170px;
+  justify-content: space-between;
 }
 .header__nav {
   display: flex;
@@ -226,7 +227,8 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 140%;
   letter-spacing: 0.14em;
   color: #7786a5;
-  gap: 40px;
+  gap: 44px;
+  margin-left: 163px;
 }
 .header__login {
   display: flex;
@@ -266,7 +268,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .connect-btn {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -286,10 +287,12 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 100px;
   background-color: rgba(111, 176, 141, 0.2);
+  margin-right: 3px;
+  margin-bottom: 4px;
 }
 .connect-btn > span::after {
   content: "";
@@ -332,7 +335,6 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 .offer__background {
   position: absolute;
@@ -351,6 +353,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 120%;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 41px;
 }
 .offer__descr {
   margin: 0px auto;
@@ -360,6 +363,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 150%;
   text-align: center;
   color: #e1edfd;
+  margin-bottom: 41px;
 }
 .offer__link {
   display: flex;
@@ -698,6 +702,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 150%;
   color: #7786a5;
   margin-top: 13px;
+  transition: all 0.3s ease;
 }
 .tab__descr {
   display: none;
@@ -1353,6 +1358,10 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.4s ease;
 }
 
+.path-hover {
+  transition: all 0.3s ease;
+}
+
 .tab_active {
   background-color: #f1f7ff;
   border-radius: 10px;
@@ -1363,6 +1372,12 @@ input[type=search]::-webkit-search-results-decoration {
   display: block;
   opacity: 1;
 }
+.tab_active .tab__title {
+  color: #2A344A;
+}
+.tab_active .path-hover {
+  stroke: #2A344A;
+}
 
 .tab-content_active {
   display: flex;
@@ -1370,6 +1385,14 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.4s ease;
 }
 
+@media (min-width: 1000px) {
+  .tab:hover .tab__title {
+    color: #2A344A;
+  }
+  .tab:hover .path-hover {
+    stroke: #2A344A;
+  }
+}
 .faq {
   margin-top: 40px;
   background: #ffffff;
@@ -1402,6 +1425,7 @@ input[type=search]::-webkit-search-results-decoration {
   transition: all 0.3s ease;
 }
 .faq__question {
+  position: relative;
   display: flex;
   align-items: center;
   height: 80px;
@@ -1414,8 +1438,25 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.faq__question::after {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='24x24/On Light/Arrow-Right'%3E%3Cpath id='Shape' d='M54.9885 50.0115C56.3065 51.3295 58.4435 51.3295 59.7615 50.0115C61.0795 48.6935 61.0795 46.5565 59.7615 45.2385L37.2615 22.7385C35.9435 21.4205 33.8065 21.4205 32.4885 22.7385L9.98851 45.2385C8.6705 46.5565 8.6705 48.6935 9.98851 50.0115C11.3065 51.3295 13.4435 51.3295 14.7615 50.0115L34.875 29.898L54.9885 50.0115Z' fill='%232A344A'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: rotate(180deg);
+  transition: all 0.4s ease;
+}
 .faq__question_active {
   background: #f1f7ff;
+}
+.faq__question_active::after {
+  transform: rotate(0deg);
 }
 .faq__answer {
   overflow: hidden;
@@ -1508,6 +1549,7 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #7786a5;
+  transition: all 0.3s ease;
 }
 .footer__container {
   display: flex;
@@ -1551,6 +1593,7 @@ input[type=search]::-webkit-search-results-decoration {
   height: 40px;
   background: #f1f7ff;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 .footer__social {
   display: flex;
@@ -1609,6 +1652,7 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 16px;
   line-height: 140%;
   color: #7786a5;
+  transition: all 0.3s ease;
 }
 .footer__nav-col:first-child > a:first-child {
   color: #2a344a;
@@ -1618,4 +1662,16 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   height: 1px;
   background-color: transparent;
+}
+
+@media (min-width: 1000px) {
+  .footer__nav-col > a:hover {
+    color: #2a344a;
+  }
+  .footer__link:hover {
+    background: #2a344a;
+  }
+  .footer__copy > a:hover {
+    color: #2a344a;
+  }
 }

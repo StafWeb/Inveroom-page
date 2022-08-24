@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
   &__background {
     position: absolute;
     top: 0px;
@@ -26,6 +25,7 @@
     line-height: 120%;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 41px;
   }
   &__descr {
     margin: 0px auto;
@@ -35,6 +35,7 @@
     line-height: 150%;
     text-align: center;
     color: #e1edfd;
+    margin-bottom: 41px;
   }
   &__link {
     display: flex;
