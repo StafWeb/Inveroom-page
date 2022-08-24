@@ -64,30 +64,40 @@ function callbackFunc() {
   }
 };
 function modal() {
-  let modalOpen = document.querySelectorAll(".modal-open");
-  let modal = document.querySelector(".modal");
-  let modalClose = document.querySelector(".modal__btn");
-  let body = document.querySelector("main");
+  let
+    modalOpen = document.querySelectorAll(".modal-open"),
+    modal = document.querySelector(".modal"),
+    modalClose = document.querySelector(".modal__btn"),
+    faqManager = document.querySelector(".faq__manager"),
+    modalLink = document.querySelectorAll(".modal__link"),
+    body = document.querySelector("main");
+  let modalRemove = () => { modal.classList.remove('modal_active'); };
   modal.addEventListener('click', (evt) => { evt.stopPropagation(); });
+  faqManager.addEventListener('click', (evt) => { evt.stopPropagation(); });
   body.addEventListener('click', () => {
-    if(modal.classList.contains('modal_active')){
-      modal.classList.remove('modal_active');
+    if (modal.classList.contains('modal_active')) {
+      modalRemove();
     }
   });
-  modalOpen.forEach(function (btn) {
+  modalOpen.forEach(btn => {
     btn.addEventListener('click', () => {
       modal.classList.add('modal_active');
     })
   });
   modalClose.addEventListener('click', () => {
-    modal.classList.remove('modal_active');
+    modalRemove();
   });
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', (e) => {
     let keyCode = e.key;
     if (keyCode === 'Escape') {
-      modal.classList.remove('modal_active');
+      modalRemove();
     }
-});
+  });
+  modalLink.forEach(el => {
+    el.addEventListener('click', () => {
+      modalRemove();
+    });
+  });
 };
 
 
