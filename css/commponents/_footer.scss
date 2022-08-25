@@ -42,20 +42,8 @@
   }
   &__logo {
     display: flex;
-    align-items: center;
-    height: 31px;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 140%;
-    letter-spacing: 0.1em;
-    color: #46536d;
+    height: 33.53px;
     margin-bottom: 18.5px;
-    & > svg {
-      margin-right: 18px;
-    }
-    & > i {
-      color: #7786a5;
-    }
   }
   &__descr {
     font-weight: 400;
@@ -99,8 +87,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20px;
-        height: 20px;
+        width: 14px;
+        height: 14px;
         border-radius: 100px;
         background-color: rgba(111, 176, 141, 0.2);
         &::after {
@@ -154,7 +142,7 @@
     color: #2a344a;
   }
   .footer__link:hover {
-    background: #46536d;
+    background: #E1EDFD;
   }
   .footer__copy > a:hover{
     color: #2a344a;
