@@ -1,5 +1,6 @@
 .offer {
   position: relative;
+  padding: 0 20px;
   padding-top: 150px;
   display: flex;
   flex-direction: column;
@@ -64,7 +65,18 @@
     }
   }
 }
-
+@media(max-width:1050px){
+  .offer{
+    &__title{
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+    &__descr{
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+}
 @media (min-width: 1000px) {
   .offer__link:hover {
     background: #2551af;

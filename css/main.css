@@ -391,6 +391,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .offer {
   position: relative;
+  padding: 0 20px;
   padding-top: 150px;
   display: flex;
   flex-direction: column;
@@ -452,6 +453,16 @@ input[type=search]::-webkit-search-results-decoration {
   pointer-events: none;
 }
 
+@media (max-width: 1050px) {
+  .offer__title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .offer__descr {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
 @media (min-width: 1000px) {
   .offer__link:hover {
     background: #2551af;
@@ -695,6 +706,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .subscribe__slider {
     order: -1;
+    height: auto;
   }
   .slider {
     display: flex;
