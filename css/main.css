@@ -330,6 +330,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .header__center_active {
     left: 0;
+    z-index: 5;
   }
   .header__nav {
     flex-direction: column;

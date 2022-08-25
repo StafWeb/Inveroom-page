@@ -108,9 +108,9 @@ function burger() {
   menu.addEventListener('click', (evt) => { evt.stopPropagation(); });
   let close = () =>{ menu.classList.remove('header__center_active'), overlay.classList.remove('overlay_active'), body.classList.remove('stop-scroll')};
   open.addEventListener('click', () => {
-    menu.classList.add('header__center_active');
-    overlay.classList.add('overlay_active');
-    body.classList.add('stop-scroll');
+    menu.classList.toggle('header__center_active');
+    overlay.classList.toggle('overlay_active');
+    body.classList.toggle('stop-scroll');
   });
   overlay.addEventListener('click', () => {
     close();
