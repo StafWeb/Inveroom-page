@@ -99,8 +99,22 @@ function modal() {
     });
   });
 };
-
-
+function burger() {
+  let 
+  menu = document.querySelector(".header__center"),
+  open = document.querySelector(".burger-open"),
+  overlay = document.querySelector(".overlay");
+  menu.addEventListener('click', (evt) => { evt.stopPropagation(); });
+  let close = () =>{ menu.classList.remove('header__center_active'), overlay.classList.remove('overlay_active');};
+  open.addEventListener('click', () => {
+    menu.classList.add('header__center_active');
+    overlay.classList.add('overlay_active');
+  });
+  overlay.addEventListener('click', () => {
+    close();
+  })
+};
+burger();
 infoTabs();
 faqQuestion();
 faqTabs();
