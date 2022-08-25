@@ -120,6 +120,15 @@
   }
 }
 
+@media(max-width:1100px){
+  .modal{
+    top: 0;
+    left: -1000px;
+&_active{
+  left: 0;
+}
+  }
+}
 @media(min-width:1000px){
   .modal{
     &__wp-link:hover{

@@ -183,6 +183,8 @@
       transition: all .4s ease;
       padding: 20px;
       gap: 20px;
+      justify-content: start;
+      height: 100vh;
       &_active{
         left: 0;
       }

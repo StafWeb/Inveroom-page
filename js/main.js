@@ -103,12 +103,14 @@ function burger() {
   let 
   menu = document.querySelector(".header__center"),
   open = document.querySelector(".burger-open"),
-  overlay = document.querySelector(".overlay");
+  overlay = document.querySelector(".overlay"),
+  body = document.body;
   menu.addEventListener('click', (evt) => { evt.stopPropagation(); });
-  let close = () =>{ menu.classList.remove('header__center_active'), overlay.classList.remove('overlay_active');};
+  let close = () =>{ menu.classList.remove('header__center_active'), overlay.classList.remove('overlay_active'), body.classList.remove('stop-scroll')};
   open.addEventListener('click', () => {
     menu.classList.add('header__center_active');
     overlay.classList.add('overlay_active');
+    body.classList.add('stop-scroll');
   });
   overlay.addEventListener('click', () => {
     close();
