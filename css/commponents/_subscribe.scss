@@ -71,7 +71,8 @@
   }
 }
 .slider {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   height: 100%;
   position: relative;
@@ -80,16 +81,13 @@
     flex-direction: column;
     gap: 30px;
     transform: translateY(0);
+    align-items: center;
+    animation: slider 50s linear infinite;
     &:first-child {
-      animation: slider 50s linear infinite;
       margin-top: 32px;
     }
     &:nth-child(2) {
-      animation: slider 50s linear infinite;
       margin-top: 112px;
-    }
-    &:last-child {
-      animation: slider 50s linear infinite;
     }
   }
   &__card {
@@ -172,42 +170,87 @@
       flex-direction: column;
       justify-content: flex-start;
     }
-    &__form{
+    &__form {
       margin: 0;
       margin-top: 50px;
     }
   }
 }
-@media(max-width:1350px){
-  .subscribe{
+@media (max-width: 1350px) {
+  .subscribe {
     height: 620px;
-    &__wrapper{
+    &__wrapper {
       padding: 0px 60px;
     }
-    &__start{
+    &__start {
       height: 620px;
       padding: 90px 0px;
     }
-    &__title{
+    &__title {
       margin-bottom: 30px;
     }
   }
-  .slider{
-    justify-content: center;
-    &__col{
-      &:last-child{
-        display: none;
+  .slider {
+    &__col {
+      animation: slider 100s linear infinite;
+      &:last-child {
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column: span 2;
       }
     }
   }
+  @keyframes slider {
+    100% {
+      transform: translateY(-1700px);
+    }
+  }
 }
-@media(max-width:1050px){
-  .subscribe{
-    &__title{
+@media (max-width: 1050px) {
+  .subscribe {
+    &__start{
+      padding: 0;
+    }
+    &__title {
       font-size: 32px;
     }
-    &__descr{
+    &__descr {
       font-size: 16px;
+    }
+    &__wrapper{
+      display: flex;
+      flex-direction: column;
+      gap:0;
+    }
+    &__slider{
+      order: -1;
+    }
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    &__col{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin: 0;
+      &:first-child{
+        margin: 0;
+      }
+      &:last-child{
+        flex-wrap: nowrap;
+        margin: 0;
+      }
+      &:nth-child(2){
+        margin: 0;
+      }
+    }
+  }
+  @keyframes slider {
+    100% {
+      transform: translatex(-3000px);
     }
   }
 }

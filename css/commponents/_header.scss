@@ -215,6 +215,14 @@
     display: flex;
   }
 }
+@media(max-width:1050px){
+  .header__container{
+    padding: 0px 20px;
+  }
+  .container{
+    padding: 0px;
+  }
+}
 @media (min-width: 1000px) {
   .header__nav {
     & > a:not(:first-child):hover {
