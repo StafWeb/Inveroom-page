@@ -469,6 +469,7 @@ input[type=search]::-webkit-search-results-decoration {
   background: #f1f7ff;
   border-radius: 10px;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 .subscribe__slider {
   height: 100%;
