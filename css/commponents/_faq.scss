@@ -1,6 +1,7 @@
 .faq {
   margin-top: 40px;
   background: #ffffff;
+  padding: 0px 20px;
   &__container {
     max-width: 1170px;
     margin: 0px auto;
@@ -84,7 +85,7 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 160%;
-      color: #7786a5;
+      color: #2a344a;
       padding: 20px 40px 40px;
       & > ul {
         list-style: disc;

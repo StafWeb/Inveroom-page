@@ -2,7 +2,7 @@
 .info {
   background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
   margin-top: 40px;
-  padding: 100px 0px;
+  padding: 100px 20px;
   min-height: 1039px;
   &__container {
     max-width: 1170px;
@@ -184,7 +184,13 @@
   opacity: 1;
   transform: scale(1);
 }
-
+@media(max-width:1050px){
+  .tab{
+    &__title{
+      font-size: 22px;
+    }
+  }
+}
 @media (min-width: 1000px) {
   .tab:hover {
     .tab__title {
