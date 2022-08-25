@@ -852,7 +852,7 @@ input[type=search]::-webkit-search-results-decoration {
 .faq__tab-btn {
   padding: 10px 20px 9px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 140%;
   color: #7786a5;
   background: #f1f7ff;
@@ -873,25 +873,33 @@ input[type=search]::-webkit-search-results-decoration {
   cursor: pointer;
   transition: all 0.4s ease;
 }
-.faq__question::after {
+.faq__question .quest-arrow {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 25px;
   right: 20px;
   width: 24px;
   height: 24px;
   content: "";
-  background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='24x24/On Light/Arrow-Right'%3E%3Cpath id='Shape' d='M54.9885 50.0115C56.3065 51.3295 58.4435 51.3295 59.7615 50.0115C61.0795 48.6935 61.0795 46.5565 59.7615 45.2385L37.2615 22.7385C35.9435 21.4205 33.8065 21.4205 32.4885 22.7385L9.98851 45.2385C8.6705 46.5565 8.6705 48.6935 9.98851 50.0115C11.3065 51.3295 13.4435 51.3295 14.7615 50.0115L34.875 29.898L54.9885 50.0115Z' fill='%232A344A'/%3E%3C/g%3E%3C/svg%3E%0A");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  transform: rotate(180deg);
+  transition: all 0.4s ease;
+}
+.faq__question .quest-arrow svg {
+  transform: rotate(0deg);
+  transition: all 0.4s ease;
+}
+.faq__question .quest-arrow path {
   transition: all 0.4s ease;
 }
 .faq__question_active {
   background: #f1f7ff;
 }
-.faq__question_active::after {
-  transform: rotate(0deg);
+.faq__question_active .quest-arrow svg {
+  transform: rotate(180deg);
+}
+.faq__question_active .quest-arrow path {
+  fill: #2a344a;
 }
 .faq__answer {
   overflow: hidden;
@@ -956,9 +964,22 @@ input[type=search]::-webkit-search-results-decoration {
 .faq__tab-btn_active {
   color: #ffffff;
   background: #7786a5;
-  font-size: 16px;
 }
 
+@media (min-width: 1000px) {
+  .faq__tab-btn:hover {
+    background: #E1EDFD;
+  }
+  .faq__tab-btn_active:hover {
+    background: #7786A5;
+  }
+  .faq__question:hover {
+    background: #F1F7FF;
+  }
+  .faq__question:hover path {
+    fill: #2a344a;
+  }
+}
 .footer {
   margin: 40px 0px;
   background: #ffffff;
