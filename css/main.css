@@ -555,13 +555,13 @@ input[type=search]::-webkit-search-results-decoration {
 
 @-webkit-keyframes slider {
   100% {
-    transform: translateY(-750px);
+    transform: translateY(-650px);
   }
 }
 
 @keyframes slider {
   100% {
-    transform: translateY(-750px);
+    transform: translateY(-650px);
   }
 }
 @media (min-width: 1000px) {
@@ -1250,12 +1250,15 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .modal__wp-link {
   background-color: #20B038;
+  transition: all 0.4s ease-in-out;
 }
 .modal__tg-link {
   background-color: #2AABEE;
+  transition: all 0.4s ease-in-out;
 }
 .modal__ms-link {
   background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
+  transition: all 0.4s ease-in-out;
 }
 
 @media (min-width: 1000px) {

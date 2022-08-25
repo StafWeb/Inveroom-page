@@ -104,12 +104,16 @@
   }
   &__wp-link{
     background-color: #20B038;
+    transition: all .4s ease-in-out;
   }
   &__tg-link{
     background-color: #2AABEE;
+    transition: all .4s ease-in-out;
+
   }
   &__ms-link{
     background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
+    transition: all .4s ease-in-out;
   }
 }
 
