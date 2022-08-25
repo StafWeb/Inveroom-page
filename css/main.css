@@ -1257,3 +1257,15 @@ input[type=search]::-webkit-search-results-decoration {
 .modal__ms-link {
   background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
 }
+
+@media (min-width: 1000px) {
+  .modal__wp-link:hover {
+    background-color: #19892c;
+  }
+  .modal__tg-link:hover {
+    background-color: #1e84ba;
+  }
+  .modal__ms-link:hover {
+    background: linear-gradient(180deg, #d6436a 0%, #4949d1 100%);
+  }
+}

@@ -112,3 +112,17 @@
     background: linear-gradient(180deg, #FE5280 0%, #5E5DFF 100%);
   }
 }
+
+@media(min-width:1000px){
+  .modal{
+    &__wp-link:hover{
+      background-color: #19892c;
+    }
+    &__tg-link:hover{
+      background-color: #1e84ba;
+    }
+    &__ms-link:hover{
+      background: linear-gradient(180deg, #d6436a 0%, #4949d1 100%);
+    }
+  }
+}
