@@ -255,6 +255,15 @@
     color: #2a344a;
   }
 }
+@media (min-width: 760px){
+  .footer{
+    &__copy{
+      & > a {
+        text-align: center;
+      }
+    }
+  }
+}
 .stop-scroll {
   overflow: hidden;
 }

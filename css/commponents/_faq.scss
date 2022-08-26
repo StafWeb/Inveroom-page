@@ -19,6 +19,7 @@
     gap: 10px;
     margin: 40px 0px;
     justify-content: start;
+    flex-wrap: wrap;
   }
   &__tab-btn {
     padding: 10px 20px 9px;
@@ -34,7 +35,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 80px;
+    min-height: 80px;
     padding: 0px 40px;
     background: #ffffff;
     font-weight: 400;
@@ -122,11 +123,7 @@
     }
   }
   &__manager {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    text-align: center;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
@@ -161,6 +158,40 @@
 @media(max-width:1100px){
   .faq{
     padding: 0px 20px;
+  }
+}
+@media(max-width:670px){
+  .faq{
+    &__title{
+      font-size: 32px;
+    }
+    &__container{
+      padding-top: 40px;
+    }
+    &__wrapper{
+      margin-bottom: 40px;
+    }
+    &__question{
+      padding: 20px 50px 20px 20px;
+      font-size: 16px;
+      .quest-arrow{
+        right: 20px;
+      }
+    }
+    &__answer{
+      &-wrapper{
+        font-size: 14px;
+        padding: 20px 20px 40px;
+      }
+    }
+    &__tabs{
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &__tab-btn{
+      font-size: 14px;
+    }
   }
 }
 @media (min-width: 1000px) {

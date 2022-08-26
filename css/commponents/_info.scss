@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .tab__logo{
+    .tab__logo {
       display: none;
     }
   }
@@ -72,6 +72,7 @@
     display: flex;
     position: absolute;
     visibility: hidden;
+    overflow: hidden;
     max-width: 500px;
     opacity: 0;
     top: 0;
@@ -280,8 +281,8 @@
     top: 0;
     right: 0;
   }
-  .adviser{
-    &__col:last-child{
+  .adviser {
+    &__col:last-child {
       margin-top: 61px;
     }
   }
@@ -300,15 +301,15 @@
     gap: 0px;
     margin-bottom: 0;
     padding: 0;
-    &__logo{
+    &__logo {
       margin: 0;
       display: none;
     }
-    &__text{
+    &__text {
       margin-top: 10px;
       gap: 0px;
       max-width: 380px;
-      .tab__logo{
+      .tab__logo {
         display: flex;
         margin-bottom: 10px;
       }
@@ -356,6 +357,51 @@
     &__title {
       font-size: 32px;
       margin-left: 91px;
+    }
+  }
+}
+@media (max-width: 670px) {
+  .adviser {
+    gap: 20px;
+    &__card{
+      max-width: 159px;
+      gap: 6px;
+    }
+    &__img{
+      width: 100%;
+      height: 100%;
+      max-height: 145px;
+    }
+    &__descr{
+      gap: 6px;
+      & > p{
+        font-size: 9.02041px;
+      }
+      & > span{
+        font-size: 9.02041px;
+      }
+    }
+    &__title{
+      font-size: 11.102px;
+    }
+  }
+  .catalog__wrap,
+  .transaction__wrap,
+  .invest__wrap {
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    max-height: 529px;
+  }
+  .info {
+    padding: 40px 17px;
+    &__title{
+      margin-left: 0;
+    }
+  }
+  .tab{
+    &__text{
+      padding: 0px 20px;
     }
   }
 }

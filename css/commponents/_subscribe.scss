@@ -204,6 +204,9 @@
       margin-bottom: 100px;
       max-width: 511px;
     }
+    &__btn{
+      font-size: 16px;
+    }
   }
   .slider{
     display: flex;
@@ -227,6 +230,13 @@
   @keyframes slider {
     100% {
       transform: translateX(-1800px);
+    }
+  }
+}
+@media(max-width:670px){
+  .subscribe{
+    &__form{
+      width: 100%;
     }
   }
 }
