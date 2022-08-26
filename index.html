@@ -161,7 +161,7 @@
             fill="#7786A5" />
         </svg>
       </button>
-      <div class="modal">
+      <div class="modal" tabindex="-1">
         <div class="modal__container">
           <button class="modal__btn">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,8 +175,7 @@
           <span class="modal__descr">Работаем без выходных и сейчас <i>онлайн</i></span>
           <span class="modal__tel"><i>+ 372</i> 54 22 02 02</span>
           <span class="modal__mail">info@inveroom.com</span>
-          <a class="modal__link modal__wp-link"
-            href="https://api.whatsapp.com/send/?phone=37254220202&text&type=phone_number&app_absent=0" target="_blank">
+          <a class="modal__link modal__wp-link" href="https://api.whatsapp.com/send/?phone=37254220202&text&type=phone_number&app_absent=0" target="_blank">
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M1 18L2.20153 13.6369C1.45869 12.3562 1.06901 10.9059 1.07307 9.42324C1.07307 4.77733 4.87249 1 9.53653 1C11.8016 1 13.9286 1.87666 15.5239 3.46839C17.1232 5.06012 18.004 7.17704 18 9.42728C18 14.0732 14.2006 17.8505 9.53247 17.8505H9.52841C8.11174 17.8505 6.71943 17.495 5.48137 16.8244L1 18ZM5.69651 15.3013L5.95224 15.4548C7.03199 16.0932 8.27005 16.4285 9.53247 16.4325H9.53653C13.4131 16.4325 16.5711 13.2935 16.5711 9.43132C16.5711 7.56084 15.8405 5.80347 14.5131 4.47837C13.1858 3.15328 11.4159 2.42609 9.53653 2.42609C5.65998 2.42205 2.50191 5.56107 2.50191 9.42324C2.50191 10.7443 2.8713 12.033 3.5776 13.1481L3.74403 13.4147L3.03367 15.9962L5.69651 15.3013Z"
@@ -224,7 +223,7 @@
       <div class="offer__graph"><img src="./images/graph-top.svg" alt=""></div>
     </section>
     <div class="container">
-      <section class="subscribe">
+      <section class="subscribe" id="subscribe">
         <div class="subscribe__wrapper">
           <div class="subscribe__start">
             <h3 class="subscribe__title">
@@ -1036,8 +1035,8 @@
               </div>
             </div>
           </div>
-          <p class="faq__manager">Если не нашли ответ на свой вопрос, тогда задайте его нашему <span class="faq__manager-btn modal-open">менеджеру</span>
-          </p>
+          <div class="faq__manager">Если не нашли ответ на свой вопрос, тогда задайте его нашему <button class="faq__manager-btn modal-open">менеджеру</button>
+          </div>
         </div>
       </section>
     </div>
@@ -1093,20 +1092,20 @@
         <div class="footer__nav">
           <div class="footer__nav-col">
             <a href="#">Главная</a>
-            <a href="#">Недвижимость</a>
-            <a href="#">О нас</a>
+            <a href="https://gabbasov98.github.io/inveroom/catalog.html">Недвижимость</a>
+            <a href="#info">О нас</a>
             <a href="#">База знаний</a>
           </div>
           <div class="footer__nav-col">
-            <a href="#">Получить подборку</a>
-            <a href="#">Подписаться на рассылку</a>
-            <a href="https://inveroom.com/registration" target="_blank">Регистрация</a>
-            <a href="#">Вход</a>
+            <a href="https://mrqz.me/inveroom" target="_blank">Получить подборку</a>
+            <a href="#subscribe">Подписаться на рассылку</a>
+            <a href="https://inveroom.com/registration">Регистрация</a>
+            <a href="https://inveroom.com/login">Вход</a>
           </div>
         </div>
         <div class="footer__social">
-          <a href="tel:+37254220202" class="tel-link"><i>+ 372</i> 54 22 02 02 <span></span></a>
-          <a href="mailto:info@inveroom.com">info@inveroom.com</a>
+          <a href="tel:+37254220202" class="tel-link" target="_blank"><i>+ 372</i> 54 22 02 02 <span></span></a>
+          <a href="mailto:info@inveroom.com" target="_blank">info@inveroom.com</a>
           <div class="footer__links parElem">
             <a class="footer__link"
               href="https://api.whatsapp.com/send/?phone=37254220202&text&type=phone_number&app_absent=0"
