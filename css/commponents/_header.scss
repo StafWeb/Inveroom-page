@@ -191,12 +191,9 @@
       gap: 20px;
       justify-content: start;
       height: 100vh;
-      // & > .modal-open{
-      //   display: none;
-      //   .modal{
-      //     display: none;
-      //   }
-      // }
+      .connect-btn{
+        display: none;
+      }
       &_active{
         left: 0;
         z-index: 5;
