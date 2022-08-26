@@ -154,6 +154,7 @@
 @media (max-width: 1420px) {
   .subscribe {
     height: 700px;
+    margin-top: 122px;
     &__wrapper {
       grid-template-columns: 380px 1fr;
       grid-template-columns: 380px 1fr;
@@ -172,6 +173,11 @@
     &__col:last-child {
       display: none;
     }
+  }
+} 
+@media (max-width: 1100px){
+  .subscribe{
+    padding: 0px 17px;
   }
 }
 

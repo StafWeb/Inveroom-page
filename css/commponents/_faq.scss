@@ -158,6 +158,11 @@
     }
   }
 }
+@media(max-width:1100px){
+  .faq{
+    padding: 0px 17px;
+  }
+}
 @media (min-width: 1000px) {
   .faq__tab-btn:hover:not(.faq__tab-btn_active) {
     background: #E1EDFD;
