@@ -1115,9 +1115,6 @@ input[type=search]::-webkit-search-results-decoration {
   width: 500px;
   height: 779px;
 }
-.catalog__wrap img {
-  height: 100%;
-}
 
 .transaction {
   top: -83px;
@@ -1126,9 +1123,6 @@ input[type=search]::-webkit-search-results-decoration {
   width: 500px;
   height: 779px;
 }
-.transaction__wrap img {
-  height: 100%;
-}
 
 .invest {
   top: -86px;
@@ -1136,9 +1130,6 @@ input[type=search]::-webkit-search-results-decoration {
 .invest__wrap {
   width: 500px;
   height: 779px;
-}
-.invest__wrap img {
-  height: 100%;
 }
 
 .path-hover {
