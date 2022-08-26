@@ -1244,8 +1244,9 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 @media (min-width: 1000px) {
-  .faq__tab-btn:hover {
+  .faq__tab-btn:hover:not(.faq__tab-btn_active) {
     background: #E1EDFD;
+    color: #2a344a;
   }
   .faq__tab-btn_active:hover {
     background: #7786A5;
