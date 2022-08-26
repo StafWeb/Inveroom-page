@@ -141,6 +141,23 @@
   background: #7786a5;
 }
 
+@media(max-width:1420px){
+  .faq{
+    margin-top: 20px;
+    padding: 0px 66px;
+    &__container{
+      padding-top: 100px;
+    }
+    &__question{
+      font-size: 18px;
+    }
+    &__answer{
+      &-wrapper{
+        font-size: 16px;
+      }
+    }
+  }
+}
 @media (min-width: 1000px) {
   .faq__tab-btn:hover:not(.faq__tab-btn_active) {
     background: #E1EDFD;

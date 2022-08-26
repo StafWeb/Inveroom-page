@@ -72,6 +72,9 @@
     &-menu{
       display: none;
     }
+    .connect-btn{
+      display: none;
+    }
   }
   &__login {
     display: flex;
@@ -163,16 +166,19 @@
     }
   }
 }
-@media(max-width:1460px){
+@media(max-width:1420px){
   .header__container{
-    padding: 0px 20px;
+    padding: 0px 86px;
+    justify-content: flex-start;
+    gap: 0;
   }
   .container{
     padding: 0px 20px;
   }
-}
-@media(max-width:1100px){
   .header{
+    &__logo{
+      margin-right: 40px;
+    }
     &__center{
       position: fixed;
       top: 70px;
@@ -185,6 +191,9 @@
       gap: 20px;
       justify-content: start;
       height: 100vh;
+      .connect-btn{
+        display: none;
+      }
       &_active{
         left: 0;
         z-index: 5;
@@ -197,12 +206,16 @@
       gap: 20px;
     }
     &__end{
-      display: none;
       margin: 0;
-      gap: 20px;
+      gap: 40px;
+      order: 1;
+      margin-left: auto;
       &-menu{
-        display: flex;
+        display: none;
         flex-direction: column;
+      }
+      .connect-btn{
+        display: flex;
       }
     }
     &_scroll{
@@ -215,14 +228,8 @@
     display: flex;
   }
 }
-@media(max-width:1050px){
-  .header__container{
-    padding: 0px 20px;
-  }
-  .container{
-    padding: 0px;
-  }
-}
+
+
 @media (min-width: 1000px) {
   .header__nav {
     & > a:not(:first-child):hover {
