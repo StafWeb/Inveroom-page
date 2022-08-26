@@ -177,7 +177,7 @@
 } 
 @media (max-width: 1100px){
   .subscribe{
-    padding: 0px 17px;
+    padding: 0px 20px;
   }
 }
 @media (max-width: 1000px){
@@ -200,7 +200,9 @@
       font-size: 16px;
     }
     &__start{
+      margin: 0 auto; 
       margin-bottom: 100px;
+      max-width: 511px;
     }
   }
   .slider{
@@ -224,7 +226,7 @@
   }
   @keyframes slider {
     100% {
-      transform: translateX(-2000px);
+      transform: translateX(-1800px);
     }
   }
 }

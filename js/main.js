@@ -120,6 +120,13 @@ burger();
 if (window.innerWidth > 1000){
   infoTabs();
 }
+if (window.innerWidth < 1000){
+  let parentEl = document.querySelector(".parElem");
+  let newEl = document.querySelector(".newElem");
+  let refEl = document.querySelector(".refElem")
+
+  parentEl.insertBefore(newEl, refEl);
+}
 faqQuestion();
 faqTabs();
 window.addEventListener('scroll', () => {

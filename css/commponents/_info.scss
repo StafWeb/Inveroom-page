@@ -47,6 +47,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    .tab__logo{
+      display: none;
+    }
   }
   &__title {
     font-weight: 700;
@@ -262,7 +265,7 @@
 }
 @media (max-width: 1100px) {
   .info {
-    padding: 0 17px;
+    padding: 0 20px;
     padding-top: 102px;
   }
 }
@@ -277,29 +280,57 @@
     top: 0;
     right: 0;
   }
+  .adviser{
+    &__col:last-child{
+      margin-top: 61px;
+    }
+  }
   .tab {
     background-color: #f1f7ff;
     border-radius: 0px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 149px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     cursor: default;
+    gap: 0px;
     margin-bottom: 0;
-    .tab__descr {
+    padding: 0;
+    &__logo{
+      margin: 0;
+      display: none;
+    }
+    &__text{
+      margin-top: 10px;
+      gap: 0px;
+      max-width: 380px;
+      .tab__logo{
+        display: flex;
+        margin-bottom: 10px;
+      }
+    }
+    &__descr {
       display: block;
       opacity: 1;
+      font-size: 18px;
     }
-    .tab__title {
+    &__title {
       color: #2a344a;
+      margin: 0;
+      margin-bottom: 20px;
     }
     .path-hover {
       stroke: #2a344a;
     }
     &-content {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      max-width: 500px;
+      max-width: 100%;
       width: 100%;
       height: 100%;
       position: relative;
@@ -308,21 +339,23 @@
       transform: scale(1);
       background-color: #f1f7ff;
       margin-bottom: 20px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      padding-bottom: 40px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 40px 0px;
     }
   }
   .info {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 100px 20px;
+    background: #ffffff;
     &__wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 40px;
     }
     &__title {
-      text-align: center;
+      font-size: 32px;
+      margin-left: 91px;
     }
   }
 }
