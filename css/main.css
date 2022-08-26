@@ -1199,6 +1199,10 @@ input[type=search]::-webkit-search-results-decoration {
     border-bottom-right-radius: 20px;
     padding-bottom: 40px;
   }
+  .info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .info__wrapper {
     display: flex;
     flex-direction: column;
