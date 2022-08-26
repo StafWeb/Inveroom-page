@@ -366,6 +366,9 @@ input[type=search]::-webkit-search-results-decoration {
   .burger-open {
     display: flex;
   }
+  .burger-open path {
+    transition: fill 0.3s ease;
+  }
 }
 @media (min-width: 1000px) {
   .header__nav > a:not(:first-child):hover {
@@ -392,6 +395,9 @@ input[type=search]::-webkit-search-results-decoration {
   .header__lang-inner:hover circle,
 .header__lang-inner:hover path {
     stroke: #ffffff;
+  }
+  .burger-open:hover path {
+    fill: #ffffff;
   }
 }
 .offer {

@@ -226,6 +226,9 @@
   }
   .burger-open{
     display: flex;
+    path{
+      transition: fill .3s ease;
+    }
   }
 }
 
@@ -256,6 +259,11 @@
     circle,
     path {
       stroke: #ffffff;
+    }
+  }
+  .burger-open:hover{
+    path{
+      fill: #ffffff;
     }
   }
 }
