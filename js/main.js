@@ -117,7 +117,9 @@ function burger() {
   })
 };
 burger();
-infoTabs();
+if (window.innerWidth > 1000){
+  infoTabs();
+}
 faqQuestion();
 faqTabs();
 window.addEventListener('scroll', () => {
