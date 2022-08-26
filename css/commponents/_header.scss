@@ -231,7 +231,11 @@
     }
   }
 }
-
+@media(max-width:1100px){
+  .header__container{
+    padding: 0px 37px;
+  }
+}
 
 @media (min-width: 1000px) {
   .header__nav {
