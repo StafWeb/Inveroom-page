@@ -54,10 +54,9 @@
       width: 24px;
       height: 24px;
       content: "";
-      transition: all 0.4s ease;
       svg {
         transform: rotate(0deg);
-        transition: all 0.4s ease;
+        transition: transform 0.4s ease .2s;
       }
       path {
         transition: all 0.4s ease;
@@ -65,9 +64,11 @@
     }
     &_active {
       background: #f1f7ff;
+      transition: all 0.4s ease;
       .quest-arrow {
         svg {
         transform: rotate(180deg);
+        transition: transform 0.4s ease;
         }
         path {
           fill: #2a344a;
@@ -78,7 +79,7 @@
   &__answer {
     overflow: hidden;
     max-height: 0px;
-    transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.6s ease-in-out;
     &-wrapper {
       display: flex;
       flex-direction: column;
@@ -101,7 +102,7 @@
       }
     }
     &_active {
-      max-height: 100vh;
+      max-height: 200vh;
     }
   }
   &__wrapper {
