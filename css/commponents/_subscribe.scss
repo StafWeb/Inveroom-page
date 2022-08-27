@@ -157,9 +157,8 @@
     margin-top: 122px;
     &__wrapper {
       grid-template-columns: 380px 1fr;
-      grid-template-columns: 380px 1fr;
-      justify-content: space-between;
       width: 100%;
+      max-width: 1000px;
     }
     &__title{
       margin-top: 126px;

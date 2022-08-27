@@ -82,7 +82,7 @@
       display: none;
     }
     &__wrapper {
-      max-width: 100%;
+      max-width: 1000px;
       justify-content: space-between;
       gap: 60px;
     }
@@ -114,6 +114,7 @@
       grid-template-columns: repeat(2, 200px);
       justify-content: center;
       gap: 77px 150px;
+      max-width: 511px;
     }
     &__col {
       align-items: flex-start;
