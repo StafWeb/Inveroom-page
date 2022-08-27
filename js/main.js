@@ -151,8 +151,8 @@ let info = gsap.timeline({
   ease: "power1.out",
   duration: 0.7,
   scrollTrigger: {
-    trigger: ".info",
-    start: "10% bottom",
+    trigger: ".info__container",
+    start: "top bottom",
   }
 });
 info.from(".info__container", { opacity: 0, y: 30 });
@@ -160,8 +160,8 @@ let faq = gsap.timeline({
   ease: "power1.out",
   duration: 0.7,
   scrollTrigger: {
-    trigger: ".faq",
-    start: "10% bottom",
+    trigger: ".faq__container",
+    start: "top bottom",
   }
 });
 faq.from(".faq__container", { opacity: 0, y: 30 });
@@ -170,7 +170,7 @@ let footer = gsap.timeline({
   duration: 0.7,
   scrollTrigger: {
     trigger: ".footer",
-    start: "10% bottom",
+    start: "top bottom",
   }
 });
 footer.from(".footer__container", { opacity: 0, y: 30 })
