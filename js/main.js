@@ -136,8 +136,8 @@ headAnim.from(".header__logo", { opacity: 0, x: -20 })
   .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
   .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
   .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
-  .from(".subscribe__start", { opacity: 0, x: "-100%" }, "-=0.3")
-  .from(".subscribe__slider", { opacity: 0, x: "100%" }, "-=0.4");
+  .from(".subscribe__start", { opacity: 0, x: -60 }, "-=0.3")
+  .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
 let result = gsap.timeline({
   ease: "power1.out",
   duration: 0.7,
