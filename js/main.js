@@ -1,52 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
-headAnim.from(".header__logo", { opacity: 0, x: -20 })
-  .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
-  .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
-  .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
-  .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
-  .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
-  .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
-  .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
-  .from(".subscribe__start", { opacity: 0, x: "-100%" }, "-=0.3")
-  .from(".subscribe__slider", { opacity: 0, x: "100%" }, "-=0.4");
-let result = gsap.timeline({
-  ease: "power1.out",
-  duration: 0.7,
-  scrollTrigger: {
-    trigger: ".result__col",
-    start: "top bottom",
-  }
-});
-result.from(".result__col", {opacity:0, y: 20});
-let info = gsap.timeline({
-  ease: "power1.out",
-  duration: 0.7,
-  scrollTrigger: {
-    trigger: ".info",
-    start: "10% bottom",
-  }
-});
-info.from(".info__container", {opacity:0, y: 30});
-let faq = gsap.timeline({
-  ease: "power1.out",
-  duration: 0.7,
-  scrollTrigger: {
-    trigger: ".faq",
-    start: "10% bottom",
-  }
-});
-faq.from(".faq__container", {opacity:0, y: 30});
-let footer = gsap.timeline({
-  ease: "power1.out",
-  duration: 0.7,
-  scrollTrigger: {
-    trigger: ".footer",
-    start: "10% bottom",
-  }
-});
-footer.from(".footer__container", {opacity:0, y: 30})
-.from(".footer__copy",{opacity:0, y: 30}, "-=0.4");
+
 function infoTabs() {
   let infoTab = document.querySelectorAll(".tab");
   let infoContent = document.querySelectorAll(".tab-content");
@@ -174,6 +127,54 @@ document.querySelectorAll(".burger-menu__btn").forEach(function (el) {
 });
 if (window.innerWidth > 1000) {
   infoTabs();
+  let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
+headAnim.from(".header__logo", { opacity: 0, x: -20 })
+  .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
+  .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
+  .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
+  .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
+  .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
+  .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
+  .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
+  .from(".subscribe__start", { opacity: 0, x: "-100%" }, "-=0.3")
+  .from(".subscribe__slider", { opacity: 0, x: "100%" }, "-=0.4");
+let result = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".result__col",
+    start: "top bottom",
+  }
+});
+result.from(".result__col", { opacity: 0, y: 20 });
+let info = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".info",
+    start: "10% bottom",
+  }
+});
+info.from(".info__container", { opacity: 0, y: 30 });
+let faq = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".faq",
+    start: "10% bottom",
+  }
+});
+faq.from(".faq__container", { opacity: 0, y: 30 });
+let footer = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "10% bottom",
+  }
+});
+footer.from(".footer__container", { opacity: 0, y: 30 })
+  .from(".footer__copy", { opacity: 0, y: 30 }, "-=0.4");
 }
 if (window.innerWidth < 1000) {
   let parentEl = document.querySelector(".parElem");
