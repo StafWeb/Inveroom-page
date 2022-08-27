@@ -7,7 +7,9 @@
     box-sizing: border-box;
     touch-action: manipulation;
 }
-
+* a{
+  color: inherit;
+}
 a, a:visited{
     text-decoration: none;
 }

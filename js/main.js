@@ -101,22 +101,29 @@ function modal() {
 };
 function burger() {
   let 
-  menu = document.querySelector(".header__center"),
+  menu = document.querySelector(".burger-menu"),
   open = document.querySelector(".burger-open"),
-  overlay = document.querySelector(".overlay"),
+  burgerClose = document.querySelectorAll(".burger-close");
   body = document.body;
   menu.addEventListener('click', (evt) => { evt.stopPropagation(); });
-  let close = () =>{ menu.classList.remove('header__center_active'), overlay.classList.remove('overlay_active'), body.classList.remove('stop-scroll')};
+  let close = () =>{ menu.classList.remove('burger-menu_active'), body.classList.remove('stop-scroll')};
   open.addEventListener('click', () => {
-    menu.classList.toggle('header__center_active');
-    overlay.classList.toggle('overlay_active');
+    menu.classList.toggle('burger-menu_active');
     body.classList.toggle('stop-scroll');
   });
-  overlay.addEventListener('click', () => {
-    close();
+  burgerClose.forEach(el => {
+    el.addEventListener('click', () => {
+      close();
+    })
   })
 };
 burger();
+document.querySelectorAll(".burger-menu__btn").forEach(function (el){
+el.addEventListener('click', function () {
+  el.classList.toggle('burger-menu__btn_active');
+  this.nextElementSibling.classList.toggle('burger-menu__list_active');
+})
+}); 
 if (window.innerWidth > 1000){
   infoTabs();
 }

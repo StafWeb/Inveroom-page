@@ -17,7 +17,7 @@
     display: flex;
     height: inherit;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
     padding: 0px 40px;
     max-width: 1920px;
@@ -30,15 +30,12 @@
   }
   &__center {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    max-width: 1182px;
     margin-top: 3px;
+    margin-left: 146px;
   }
   &__nav {
     display: flex;
     gap: 40px;
-    margin-left: 6px;
     align-items: flex-end;
     a {
       display: flex;
@@ -67,20 +64,14 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #7786a5;
-    gap: 44px;
-    margin-left: 20px;
-    &-menu {
-      display: none;
-    }
-    .connect-btn {
-      display: none;
-    }
+    margin-left: auto;
   }
   &__login {
     display: flex;
     gap: 10px;
     color: #7786a5;
     transition: all 0.3s ease;
+    margin-left: 179px;
     path {
       transition: all 0.3s ease;
     }
@@ -90,6 +81,7 @@
     }
   }
   &__lang {
+    margin-left: 44px;
     &-inner {
       display: flex;
       gap: 11px;
@@ -180,43 +172,17 @@
       margin-right: 40px;
     }
     &__center {
-      position: fixed;
-      top: 70px;
-      left: -1000px;
-      flex-direction: column;
-      background-color: #07122a;
-      width: auto;
-      transition: all 0.4s ease;
-      padding: 20px;
-      gap: 20px;
-      justify-content: start;
-      height: 100vh;
-      .connect-btn {
-        display: none;
-      }
-      &_active {
-        left: 0;
-        z-index: 5;
-      }
-    }
-    &__nav {
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 0;
-      gap: 20px;
+      display: none;
     }
     &__end {
       margin: 0;
       gap: 40px;
       order: 1;
       margin-left: auto;
-      &-menu {
-        display: none;
-        flex-direction: column;
-      }
-      .connect-btn {
-        display: flex;
-      }
+    }
+    &__lang,
+    &__login{
+      margin: 0;
     }
     &_scroll {
       .header__center {
@@ -244,23 +210,10 @@
     height: 50px;
     &__end {
       margin: 0;
-      .connect-btn,
-      .header__lang {
-        display: none;
-      }
-      &-menu {
-        display: flex;
-        margin: 0;
-        .header__lang {
-          display: flex;
-        }
-      }
     }
-    &__center {
-      top: 47px;
-      .connect-btn {
-        display: flex;
-      }
+    .connect-btn,
+    .header__lang {
+      display: none;
     }
     &__container {
       padding: 0px 20px;
