@@ -1645,6 +1645,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 140%;
   color: #7786a5;
   margin-bottom: 63px;
+  transition: color 0.3s ease;
 }
 .footer__nav {
   display: flex;
@@ -1782,8 +1783,11 @@ input[type=search]::-webkit-search-results-decoration {
   .footer__copy > a:hover {
     color: #2a344a;
   }
+  .footer__social > a:nth-child(2):hover {
+    color: #2a344a;
+  }
 }
-@media (min-width: 760px) {
+@media (max-width: 760px) {
   .footer__copy > a {
     text-align: center;
   }

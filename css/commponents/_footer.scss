@@ -106,6 +106,7 @@
       line-height: 140%;
       color: #7786a5;
       margin-bottom: 63px;
+      transition: color .3s ease;
     }
   }
   &__nav {
@@ -254,8 +255,11 @@
   .footer__copy > a:hover {
     color: #2a344a;
   }
+  .footer__social > a:nth-child(2):hover{
+    color: #2a344a;
+  }
 }
-@media (min-width: 760px){
+@media (max-width: 760px){
   .footer{
     &__copy{
       & > a {

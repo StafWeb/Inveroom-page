@@ -1,3 +1,52 @@
+gsap.registerPlugin(ScrollTrigger);
+let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
+headAnim.from(".header__logo", { opacity: 0, x: -20 })
+  .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
+  .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
+  .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
+  .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
+  .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
+  .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
+  .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
+  .from(".subscribe__start", { opacity: 0, x: "-100%" }, "-=0.3")
+  .from(".subscribe__slider", { opacity: 0, x: "100%" }, "-=0.4");
+let result = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".result__col",
+    start: "top bottom",
+  }
+});
+result.from(".result__col", {opacity:0, y: 20});
+let info = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".info",
+    start: "10% bottom",
+  }
+});
+info.from(".info__container", {opacity:0, y: 30});
+let faq = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".faq",
+    start: "10% bottom",
+  }
+});
+faq.from(".faq__container", {opacity:0, y: 30});
+let footer = gsap.timeline({
+  ease: "power1.out",
+  duration: 0.7,
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "10% bottom",
+  }
+});
+footer.from(".footer__container", {opacity:0, y: 30})
+.from(".footer__copy",{opacity:0, y: 30}, "-=0.4");
 function infoTabs() {
   let infoTab = document.querySelectorAll(".tab");
   let infoContent = document.querySelectorAll(".tab-content");
@@ -12,7 +61,6 @@ function infoTabs() {
   let tabContRem = () => { infoContent.forEach(el => { el.classList.remove('tab-content_active') }) };
   let tabRem = () => { infoTab.forEach(el => { el.classList.remove('tab_active') }) };
 };
-
 function faqQuestion() {
   let tab = document.querySelectorAll(".faq__question");
   let content = document.querySelectorAll(".faq__answer");
@@ -100,13 +148,13 @@ function modal() {
   });
 };
 function burger() {
-  let 
-  menu = document.querySelector(".burger-menu"),
-  open = document.querySelector(".burger-open"),
-  burgerClose = document.querySelectorAll(".burger-close");
+  let
+    menu = document.querySelector(".burger-menu"),
+    open = document.querySelector(".burger-open"),
+    burgerClose = document.querySelectorAll(".burger-close");
   body = document.body;
   menu.addEventListener('click', (evt) => { evt.stopPropagation(); });
-  let close = () =>{ menu.classList.remove('burger-menu_active'), body.classList.remove('stop-scroll')};
+  let close = () => { menu.classList.remove('burger-menu_active'), body.classList.remove('stop-scroll') };
   open.addEventListener('click', () => {
     menu.classList.toggle('burger-menu_active');
     body.classList.toggle('stop-scroll');
@@ -118,16 +166,16 @@ function burger() {
   })
 };
 burger();
-document.querySelectorAll(".burger-menu__btn").forEach(function (el){
-el.addEventListener('click', function () {
-  el.classList.toggle('burger-menu__btn_active');
-  this.nextElementSibling.classList.toggle('burger-menu__list_active');
-})
-}); 
-if (window.innerWidth > 1000){
+document.querySelectorAll(".burger-menu__btn").forEach(function (el) {
+  el.addEventListener('click', function () {
+    el.classList.toggle('burger-menu__btn_active');
+    this.nextElementSibling.classList.toggle('burger-menu__list_active');
+  })
+});
+if (window.innerWidth > 1000) {
   infoTabs();
 }
-if (window.innerWidth < 1000){
+if (window.innerWidth < 1000) {
   let parentEl = document.querySelector(".parElem");
   let newEl = document.querySelector(".newElem");
   let refEl = document.querySelector(".refElem")
