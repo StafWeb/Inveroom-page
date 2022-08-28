@@ -1288,7 +1288,7 @@ input[type=search]::-webkit-search-results-decoration {
   .info__title {
     font-size: 32px;
     max-width: 511px;
-    margin: 0px auto;
+    margin: 0;
   }
 }
 @media (max-width: 670px) {
@@ -1471,9 +1471,8 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 140%;
   color: #2a344a;
 }
-.faq__manager-btn {
+.faq__manager-link {
   color: #2551af;
-  cursor: pointer;
 }
 
 .faq__tab-btn_active {
