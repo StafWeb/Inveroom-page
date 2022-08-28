@@ -151,6 +151,9 @@
         top: -40px;
         left: 0;
       }
+      &:nth-child(3)::after {
+        display: block;
+      }
     }
     &__descr{
       max-width: 300px;

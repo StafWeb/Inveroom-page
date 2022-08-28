@@ -198,6 +198,7 @@
   .footer {
     &__container {
       padding: 20px;
+      padding-top: 40px;
       flex-direction: column;
       align-items: center;
     }
@@ -238,6 +239,9 @@
       & > a{
         margin: 0;
       }
+    }
+    &__links{
+      gap: 20px;
     }
     .parElem{
       order: -1;
