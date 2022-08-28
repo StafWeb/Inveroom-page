@@ -702,6 +702,7 @@ input[type=search]::-webkit-search-results-decoration {
 @media (max-width: 1000px) {
   .subscribe {
     height: auto;
+    background: linear-gradient(0deg, #FFFFFF 0%, #F1F7FF 100%);
   }
   .subscribe__wrapper {
     display: flex;
@@ -758,6 +759,9 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (max-width: 670px) {
+  .subscribe {
+    background: linear-gradient(180deg, #F1F7FF 0%, #FFFFFF 100%);
+  }
   .subscribe__form {
     width: 100%;
   }
