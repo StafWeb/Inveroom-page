@@ -155,7 +155,7 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
     .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
   let result = gsap.timeline({
     ease: "power1.out",
-    duration: 0.7,
+    duration: 0.5,
     scrollTrigger: {
       trigger: ".result",
       start: "top bottom",
@@ -164,7 +164,7 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
   result.from(".result__col", { opacity: 0, y: 20 });
   let info = gsap.timeline({
     ease: "power1.out",
-    duration: 0.7,
+    duration: 0.5,
     scrollTrigger: {
       trigger: ".info",
       start: "top bottom",
@@ -173,7 +173,7 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
   info.from(".info__container", { opacity: 0, y: 30 });
   let faq = gsap.timeline({
     ease: "power1.out",
-    duration: 0.7,
+    duration: 0.5,
     scrollTrigger: {
       trigger: ".faq",
       start: "top bottom",
