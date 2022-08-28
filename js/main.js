@@ -118,6 +118,10 @@ function burger() {
     })
   })
 };
+function reloadWin() {
+  let a = window.location.reload(true);
+  return a;
+};
 burger();
 document.querySelectorAll(".burger-menu__btn").forEach(function (el) {
   el.addEventListener('click', function () {
@@ -125,57 +129,57 @@ document.querySelectorAll(".burger-menu__btn").forEach(function (el) {
     this.nextElementSibling.classList.toggle('burger-menu__list_active');
   })
 });
-if (window.innerWidth > 1000) {
-  infoTabs();
-  let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
-  headAnim.from(".header__logo", { opacity: 0, x: -20 })
-    .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
-    .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
-    .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
-    .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
-    .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
-    .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
-    .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
-    .from(".subscribe__start", { opacity: 0, x: -60 }, "-=0.3")
-    .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
-  let result = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.7,
-    scrollTrigger: {
-      trigger: ".result",
-      start: "top bottom",
-    }
-  });
-  result.from(".result__col", { opacity: 0, y: 20 });
-  let info = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.7,
-    scrollTrigger: {
-      trigger: ".info",
-      start: "top bottom",
-    }
-  });
-  info.from(".info__container", { opacity: 0, y: 30 });
-  let faq = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.7,
-    scrollTrigger: {
-      trigger: ".faq",
-      start: "top bottom",
-    }
-  });
-  faq.from(".faq__container", { opacity: 0, y: 30 });
-}
-if (window.innerWidth < 1000) {
-  let parentEl = document.querySelector(".parElem");
-  let newEl = document.querySelector(".newElem");
-  let refEl = document.querySelector(".refElem")
-
-  parentEl.insertBefore(newEl, refEl);
-}
 faqQuestion();
 faqTabs();
 window.addEventListener('scroll', () => {
   callbackFunc();
 });
 modal();
+if (window.matchMedia("(min-width: 1000px)").matches) {
+  console.log("1");
+  infoTabs();
+  let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
+      headAnim.from(".header__logo", { opacity: 0, x: -20 })
+        .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
+        .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
+        .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
+        .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
+        .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
+        .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
+        .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
+        .from(".subscribe__start", { opacity: 0, x: -60 }, "-=0.3")
+        .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
+      let result = gsap.timeline({
+        ease: "power1.out",
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: ".result",
+          start: "top bottom",
+        }
+      });
+      result.from(".result__col", { opacity: 0, y: 20 });
+      let info = gsap.timeline({
+        ease: "power1.out",
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: ".info",
+          start: "top bottom",
+        }
+      });
+      info.from(".info__container", { opacity: 0, y: 30 });
+      let faq = gsap.timeline({
+        ease: "power1.out",
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: ".faq",
+          start: "top bottom",
+        }
+      });
+      faq.from(".faq__container", { opacity: 0, y: 30 });
+} else {
+  console.log("2");
+  let parentEl = document.querySelector(".parElem");
+  let newEl = document.querySelector(".newElem");
+  let refEl = document.querySelector(".refElem");
+  parentEl.insertBefore(newEl, refEl);
+};
