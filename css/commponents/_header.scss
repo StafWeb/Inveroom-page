@@ -1,4 +1,4 @@
-// --- Header --- //
+// --- HEADER --- //
 .header {
   width: 100%;
   background-color: #07122a;
@@ -233,7 +233,6 @@
     margin-left: auto;
   }
 }
-
 @media (min-width: 1000px) {
   .header__nav {
     & > a:not(:first-child):hover {

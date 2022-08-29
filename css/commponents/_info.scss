@@ -1,4 +1,4 @@
-// --- info --- //
+// --- INFO --- //
 .info {
   background: linear-gradient(90deg, #ffffff 0%, #f1f7ff 100%);
   margin-top: 40px;
@@ -80,7 +80,6 @@
     transition: all 0.5s ease;
   }
 }
-
 .adviser {
   gap: 29px;
   top: -91px;
@@ -132,7 +131,6 @@
     }
   }
 }
-
 .catalog {
   top: -89px;
   &__wrap {
@@ -140,7 +138,6 @@
     height: 779px;
   }
 }
-
 .transaction {
   top: -83px;
   &__wrap {
@@ -148,7 +145,6 @@
     height: 779px;
   }
 }
-
 .invest {
   top: -86px;
   &__wrap {
@@ -180,7 +176,6 @@
   opacity: 1;
   transform: scale(1);
 }
-
 @media (max-width: 1420px) {
   .info {
     margin-top: 20px;

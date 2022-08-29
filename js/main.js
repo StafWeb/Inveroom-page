@@ -14,6 +14,7 @@ function infoTabs() {
   let tabContRem = () => { infoContent.forEach(el => { el.classList.remove('tab-content_active') }) };
   let tabRem = () => { infoTab.forEach(el => { el.classList.remove('tab_active') }) };
 };
+
 function faqQuestion() {
   let tab = document.querySelectorAll(".faq__question");
   let content = document.querySelectorAll(".faq__answer");
@@ -32,15 +33,17 @@ function faqQuestion() {
   let tabContRem = () => { content.forEach(el => { el.classList.remove('faq__answer_active') }) };
   let tabRem = () => { tab.forEach(el => { el.classList.remove('faq__question_active') }) };
 };
+
 function faqTabs() {
-  const tabs = document.querySelector('.faq');
-  const tabsBtn = document.querySelectorAll('.faq__tab-btn');
-  const tabsContent = document.querySelectorAll('.faq__wrapper');
+  let
+    tabs = document.querySelector('.faq'),
+    tabsBtn = document.querySelectorAll('.faq__tab-btn'),
+    tabsContent = document.querySelectorAll('.faq__wrapper');
 
   if (tabs) {
     tabs.addEventListener('click', (e) => {
       if (e.target.classList.contains('faq__tab-btn')) {
-        const tabsPath = e.target.dataset.tabsPath;
+        let tabsPath = e.target.dataset.tabsPath;
         tabsBtn.forEach(el => { el.classList.remove('faq__tab-btn_active') });
         document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('faq__tab-btn_active');
         tabsHandler(tabsPath);
@@ -48,12 +51,13 @@ function faqTabs() {
     });
   }
 
-  const tabsHandler = (path) => {
+  let tabsHandler = (path) => {
     tabsContent.forEach(el => { el.classList.remove('faq__wrapper_active') });
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('faq__wrapper_active');
   };
 
 };
+
 function headerFix() {
   let y = window.pageYOffset;
   let h = document.querySelector(".header");
@@ -64,6 +68,7 @@ function headerFix() {
     h.classList.remove("header_scroll");
   }
 };
+
 function modal() {
   let
     modalOpen = document.querySelectorAll(".modal-open"),
@@ -100,6 +105,7 @@ function modal() {
     });
   });
 };
+
 function burger() {
   let
     menu = document.querySelector(".burger-menu"),
@@ -124,10 +130,7 @@ function burger() {
     }
   });
 };
-modal();
-burger();
-faqQuestion();
-faqTabs();
+
 document.querySelectorAll(".burger-menu__btn").forEach(function (el) {
   el.addEventListener('click', function () {
     el.classList.toggle('burger-menu__btn_active');
@@ -140,7 +143,6 @@ window.addEventListener('scroll', () => {
 });
 
 if (window.matchMedia("(min-width: 1000px)").matches) {
-  console.log("1");
   infoTabs();
   let headAnim = gsap.timeline({ delay: 0.5, ease: "power1.out", duration: 0.6 });
   headAnim.from(".header__logo", { opacity: 0, x: -20 })
@@ -181,9 +183,13 @@ if (window.matchMedia("(min-width: 1000px)").matches) {
   });
   faq.from(".faq__container", { opacity: 0, y: 30 });
 } else {
-  console.log("2");
   let parentEl = document.querySelector(".parElem");
   let newEl = document.querySelector(".newElem");
   let refEl = document.querySelector(".refElem");
   parentEl.insertBefore(newEl, refEl);
 };
+
+modal();
+burger();
+faqQuestion();
+faqTabs();
