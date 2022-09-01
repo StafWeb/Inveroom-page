@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
   &__background {
     position: absolute;
     top: 0px;
@@ -101,7 +100,6 @@
     &__graph {
       bottom: 41%;
       left: -790px;
-      width: 1200px;
     }
   }
 }

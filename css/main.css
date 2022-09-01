@@ -414,7 +414,6 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
 }
 .offer__background {
   position: absolute;
@@ -503,7 +502,6 @@ input[type=search]::-webkit-search-results-decoration {
   .offer__graph {
     bottom: 41%;
     left: -790px;
-    width: 1200px;
   }
 }
 @media (min-width: 1000px) {
