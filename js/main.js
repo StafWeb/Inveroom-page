@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia("(min-width: 1000px)").matches) {
     infoTabs();
     let headAnim = gsap.timeline({ ease: "power1.out", duration: 0.6 });
-    headAnim.from("body", { opacity: 0 })
+    headAnim.fromTo("body", { opacity: 0 }, {opacity:1})
       .from(".header__logo", { opacity: 0, x: -20 })
       .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
       .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")

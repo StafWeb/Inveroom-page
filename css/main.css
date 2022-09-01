@@ -94,6 +94,7 @@ body {
   overflow-y: overlay;
   overflow-x: hidden;
   scrollbar-width: none;
+  opacity: 0;
 }
 body ::-webkit-scrollbar {
   height: 0px;
@@ -493,6 +494,9 @@ input[type=search]::-webkit-search-results-decoration {
     font-size: 18px;
     margin-bottom: 50px;
     max-width: 511px;
+  }
+  body {
+    opacity: 1;
   }
 }
 @media (max-width: 670px) {

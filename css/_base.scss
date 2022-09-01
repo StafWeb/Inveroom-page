@@ -12,6 +12,7 @@ body {
   overflow-y: overlay;
   overflow-x: hidden;
   scrollbar-width: none;
+  opacity: 0;
   ::-webkit-scrollbar {
     height: 0px;
     width: 0px;
