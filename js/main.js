@@ -1,5 +1,51 @@
 gsap.registerPlugin(ScrollTrigger);
 
+if (window.matchMedia("(min-width: 1000px)").matches) {
+  infoTabs();
+  let headAnim = gsap.timeline({ease: "power1.out", duration: 0.6 });
+  headAnim.from(".header__logo", { opacity: 0, x: -20 })
+    .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
+    .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
+    .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
+    .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
+    .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
+    .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
+    .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
+    .from(".subscribe__start", { opacity: 0, x: -60 }, "-=0.3")
+    .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
+  let result = gsap.timeline({
+    ease: "power1.out",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".result",
+      start: "top bottom",
+    }
+  });
+  result.from(".result__col", { opacity: 0, y: 20 });
+  let info = gsap.timeline({
+    ease: "power1.out",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".info",
+      start: "top bottom",
+    }
+  });
+  info.from(".info__container", { opacity: 0, y: 30 });
+  let faq = gsap.timeline({
+    ease: "power1.out",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".faq",
+      start: "top bottom",
+    }
+  });
+  faq.from(".faq__container", { opacity: 0, y: 30 });
+} else {
+  let parentEl = document.querySelector(".parElem");
+  let newEl = document.querySelector(".newElem");
+  let refEl = document.querySelector(".refElem");
+  parentEl.insertBefore(newEl, refEl);
+};
 function infoTabs() {
   let infoTab = document.querySelectorAll(".tab");
   let infoContent = document.querySelectorAll(".tab-content");
@@ -142,52 +188,7 @@ window.addEventListener('scroll', () => {
   headerFix();
 });
 
-if (window.matchMedia("(min-width: 1000px)").matches) {
-  infoTabs();
-  let headAnim = gsap.timeline({ease: "power1.out", duration: 0.6 });
-  headAnim.from(".header__logo", { opacity: 0, x: -20 })
-    .from(".burger-open", { opacity: 0, x: -20 }, "-=0.4")
-    .from(".header__center", { opacity: 0, scale: 0.7 }, "-=0.4")
-    .from(".header__end", { opacity: 0, x: 30 }, "-=0.5")
-    .from(".offer__title", { opacity: 0, y: 30 }, "-=0.3")
-    .from(".offer__descr", { opacity: 0, y: 30 }, "-=0.3")
-    .from(".offer__link-wrapper", { opacity: 0, scale: 0.6 }, "-=0.3")
-    .from(".offer__graph", { opacity: 0, scale: 0.6 }, "-=0.4")
-    .from(".subscribe__start", { opacity: 0, x: -60 }, "-=0.3")
-    .from(".subscribe__slider", { opacity: 0, x: 60 }, "-=0.4");
-  let result = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: ".result",
-      start: "top bottom",
-    }
-  });
-  result.from(".result__col", { opacity: 0, y: 20 });
-  let info = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: ".info",
-      start: "top bottom",
-    }
-  });
-  info.from(".info__container", { opacity: 0, y: 30 });
-  let faq = gsap.timeline({
-    ease: "power1.out",
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: ".faq",
-      start: "top bottom",
-    }
-  });
-  faq.from(".faq__container", { opacity: 0, y: 30 });
-} else {
-  let parentEl = document.querySelector(".parElem");
-  let newEl = document.querySelector(".newElem");
-  let refEl = document.querySelector(".refElem");
-  parentEl.insertBefore(newEl, refEl);
-};
+
 
 modal();
 burger();
